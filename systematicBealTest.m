@@ -33,19 +33,14 @@ function systematicBealTest()
     % Test 5: Fibonacci Numbers
     disp('Testing Fibonacci Numbers:');
     fibonacci_range = generateFibonacciNumbers(20);  % Modify the range as needed
-    testBealConjecture(fibonacci_range, fibonacci_range, fibonacci_range, x_range, y_range, z_range);
+    testBealConjecture(fibonacci_range(2:1:end), fibonacci_range(2:1:end), fibonacci_range(2:1:end), x_range, y_range, z_range);
 
-    % Test 6: Lucas Numbers
-    disp('Testing Lucas Numbers:');
-    lucas_range = generateLucasNumbers(20);   % Modify the range as needed
-    testBealConjecture(lucas_range, lucas_range, lucas_range, x_range, y_range, z_range);
-
-    % Test 7: Special Exponents
+    % Test 6: Special Exponents
     disp('Testing Special Exponents:');
     special_exponents_range = [2, 3, 5, 7];   % Modify the range as needed
     testBealConjecture(A_range, B_range, C_range, special_exponents_range, special_exponents_range, special_exponents_range);
 
-    % Test 8: Specific Diophantine Equations
+    % Test 7: Specific Diophantine Equations
     disp('Testing Specific Diophantine Equations:');
     % You can add specific Diophantine equations to test here
     % For example: testBealConjecture(A_range, B_range, C_range, x_range, y_range, 2*x_range);
@@ -92,12 +87,3 @@ function fibonacci_numbers = generateFibonacciNumbers(n)
     end
 end
 
-function lucas_numbers = generateLucasNumbers(n)
-    % Generate the first n Lucas numbers
-    lucas_numbers = zeros(1, n);
-    lucas_numbers(1) = 2;
-    lucas_numbers(2) = 1;
-    for i = 3:n
-        lucas_numbers(i) = lucas_numbers(i-1) + lucas_numbers(i-2);
-    end
-end
