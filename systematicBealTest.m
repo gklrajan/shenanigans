@@ -42,8 +42,7 @@ function systematicBealTest()
 
     % Test 7: Specific Diophantine Equations
     disp('Testing Specific Diophantine Equations:');
-    % You can add specific Diophantine equations to test here
-    testBealConjecture(A_range, B_range, C_range, x_range, 2*y_range, 4*x_range);
+    testBealConjecture(A_range, B_range, C_range, x_range, 2*x_range, 3*x_range);
 
 end
 
