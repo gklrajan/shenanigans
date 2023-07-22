@@ -1,14 +1,27 @@
 function testEulerSumOfPowersConjecture(lowerLimit, upperLimit)
-    % lowerLimit: The lower bound for the positive integers a, b, c, and n.
-    % upperLimit: The upper bound for the positive integers a, b, c, and n.
+    % lowerLimit: The lower bound for the positive integers a, b, and c.
+    % upperLimit: The upper bound for the positive integers a, b, and c.
 
-    % Loop through all combinations of a, b, c, and n in the specified range.
+    % using 64bit double for calculation, so use a limit beyond which we
+    % can not compute
+    maxN = 2^53;
+
+    % Loop through all combinations of a, b, c.
     for a = lowerLimit:upperLimit
         for b = lowerLimit:upperLimit
             for c = lowerLimit:upperLimit
-                for n = 3:upperLimit
+                % Set the upper limit for n as the smallest of a, b, c, and maxN.
+                upperN = min([a, b, c]);
+
+                % Loop through n from 3 to the upper limit.
+                for n = 3:upperN
+
+                   if a^n + b^n > maxN || c^n > maxN
+                       disp('computation limit reached!');
+                       return;
+
                     % Check if a^n + b^n = c^n
-                    if abs(a^n + b^n - c^n) < 1e-9  % Adjust the tolerance as needed
+                   else if a^n + b^n == c^n
                         % Report the counterexample if found
                         disp(['Counterexample found for Euler''s Sum of Powers Conjecture: a=', ...
                             num2str(a), ', b=', num2str(b), ', c=', num2str(c), ', n=', num2str(n)]);
