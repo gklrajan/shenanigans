@@ -15,7 +15,7 @@ function testBealConjecture()
                 for x = x_range
                     for y = y_range
                         for z = z_range
-                            % Check if A, B, and C do not share a common prime factor
+                            % Check if A, B, and C do not share a common factor
                             if gcd(A, B) == 1 && gcd(A, C) == 1 && gcd(B, C) == 1
                                 % Use vpa to perform arithmetic with higher precision
                                 sum_powers = vpa(A)^x + vpa(B)^y;
@@ -23,7 +23,7 @@ function testBealConjecture()
 
                                 % Check if A^x + B^y = C^z
                                 if sum_powers == C_power
-                                    % Report the values when the equation holds, and A, B, and C do not share a common prime factor
+                                    % Report the values when the equation holds, and A, B, and C do not share a common factor
                                     disp(['Conjecture holds for A=', num2str(A), ...
                                         ', B=', num2str(B), ', C=', num2str(C), ...
                                         ', x=', num2str(x), ', y=', num2str(y), ', z=', num2str(z)]);
