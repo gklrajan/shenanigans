@@ -1,12 +1,12 @@
 function systematicBealTest()
 
     % Define the range of values for A, B, C, x, y, and z
-    A_range = 1:100;    % Modify the range as needed
-    B_range = 1:100;    % Modify the range as needed
-    C_range = 1:100;    % Modify the range as needed
-    x_range = 3:10;     % Modify the range as needed
-    y_range = 3:10;     % Modify the range as needed
-    z_range = 3:10;     % Modify the range as needed
+    A_range = 1:15;    % Modify the range as needed
+    B_range = 1:15;    % Modify the range as needed
+    C_range = 1:15;    % Modify the range as needed
+    x_range = 3:11;     % Modify the range as needed
+    y_range = 3:11;     % Modify the range as needed
+    z_range = 3:11;     % Modify the range as needed
 
     % Test 1: Small Values of A, B, and C
     disp('Testing Small Values of A, B, and C:');
@@ -37,13 +37,13 @@ function systematicBealTest()
 
     % Test 6: Special Exponents
     disp('Testing Special Exponents:');
-    special_exponents_range = [2, 3, 5, 7];   % Modify the range as needed
+    special_exponents_range = [42, 43, 44, 45];   % Modify the range as needed
     testBealConjecture(A_range, B_range, C_range, special_exponents_range, special_exponents_range, special_exponents_range);
 
     % Test 7: Specific Diophantine Equations
     disp('Testing Specific Diophantine Equations:');
     % You can add specific Diophantine equations to test here
-    % For example: testBealConjecture(A_range, B_range, C_range, x_range, y_range, 2*x_range);
+    testBealConjecture(A_range, B_range, C_range, x_range, 2*y_range, 4*x_range);
 
 end
 
