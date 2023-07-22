@@ -1,4 +1,3 @@
-function systematicBealTest()
 
     % Define the range of values for A, B, C, x, y, and z
     A_range = 1:15;    % Modify the range as needed
@@ -14,9 +13,9 @@ function systematicBealTest()
 
     % Test 2: Large Values of A, B, and C
     disp('Testing Large Values of A, B, and C:');
-    A_range_large = 10^14 : 10^15;   % Modify the range as needed
-    B_range_large = 10^14 : 10^15;   % Modify the range as needed
-    C_range_large = 10^14 : 10^15;   % Modify the range as needed
+    A_range_large = 10^8 : 10^9;   % Modify the range as needed
+    B_range_large = 10^8 : 10^9;   % Modify the range as needed
+    C_range_large = 10^8 : 10^9;   % Modify the range as needed
     testBealConjecture(A_range_large, B_range_large, C_range_large, x_range, y_range, z_range);
 
     % Test 3: Primes and Prime Powers
@@ -44,7 +43,6 @@ function systematicBealTest()
     disp('Testing Specific Diophantine Equations:');
     testBealConjecture(A_range, B_range, C_range, x_range, 2*x_range, 3*x_range);
 
-end
 
 function testBealConjecture(A_range, B_range, C_range, x_range, y_range, z_range)
     % Loop through all combinations of A, B, C, x, y, and z
