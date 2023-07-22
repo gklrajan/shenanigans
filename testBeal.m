@@ -34,5 +34,6 @@ function testBealConjecture()
                 end
             end
         end
+    disp(A);
     end
 end
