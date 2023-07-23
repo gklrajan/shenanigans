@@ -21,7 +21,7 @@
     % Test 3: Primes and Prime Powers
     disp('Testing Primes and Prime Powers:');
     primes_range = primes(100);  % Modify the range as needed
-    primes_powers_range = 2:5;   % Modify the range as needed
+    primes_powers_range = 3:9;   % Modify the range as needed
     testBealConjecture(primes_range, primes_range, primes_range, primes_powers_range, primes_powers_range, primes_powers_range);
 
     % Test 4: Consecutive Numbers
