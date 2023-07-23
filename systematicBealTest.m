@@ -1,8 +1,8 @@
 %% some background
-% The Beal Conjecture is a mathematical hypothesis proposed by businessman
+% The Beal Conjecture is a mathematical "hypothesis" proposed by businessman
 % Andrew Beal in 1993. It posits that for any three positive integers A, B,
 % and C, and any positive integers x, y, and z (greater than 2), if A^x +
-% B^y = C^z, then A, B, and C must have a common prime factor. The
+% B^y = C^z, then A, B, and C must have a common factor. The
 % conjecture remains unproven, and a counterexample has not been found to
 % disprove it, making it one of the unsolved problems in number theory.
 % Andrew Beal established a $1 million prize for anyone who can provide a
